@@ -1,0 +1,14 @@
+// ─────────────────────────────────────────────────────────────
+// EDIT THIS LINE before your first build.
+// Use anything unique to you, e.g. com.marcus.apps. No spaces.
+WINGMAN_BUNDLE_PREFIX = com.CHANGE-ME
+// ─────────────────────────────────────────────────────────────
+
+// Derived. Leave these alone.
+WINGMAN_APP_GROUP = group.$(WINGMAN_BUNDLE_PREFIX).wingman
+
+// Optional: bake your API key into the build instead of typing it in the app.
+// Copy Secrets.example.xcconfig to Secrets.xcconfig and put the key there
+// (Secrets.xcconfig is git-ignored).
+CLAUDE_API_KEY =
+#include? "Secrets.xcconfig"

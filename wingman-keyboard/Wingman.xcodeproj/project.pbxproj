@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C31D86B5DD41FFFB31987FE /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314CA47E8D60ED2A35F588C /* KeyboardViewController.swift */; };
+		0E780E3DA3C71EFD5D9CB9BF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEA642542E5416D164B937 /* Models.swift */; };
+		0EAAA7D14D806003E2FA0C00 /* ScreenshotTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197D9E604BCD4DC1DB736C5 /* ScreenshotTools.swift */; };
+		0F27C64181CD0205A0BB3FEE /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3E9A1FB72539607B10A778 /* SetupView.swift */; };
+		24E3271F2AD526B1E390211F /* ClaudeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D973F1C7B5238A63BD7FEB0 /* ClaudeClient.swift */; };
+		435B39569314560F9B6B90BE /* LinesOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A363CC2EB0C1805ACB89C /* LinesOfTheDay.swift */; };
+		6A079D11EBB543751288422B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977CF88D330606B456D6022E /* TodayView.swift */; };
+		70E3A2FB6CDA9AA44EB55C73 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB088D03A704A6EA43C7F0BE /* AppModel.swift */; };
+		7F5019DF0E5E362CC420E31E /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476286EFB5BA413AC43B37C2 /* KeyboardState.swift */; };
+		7FDDDA62C0860A3C76D88C05 /* ClaudeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D973F1C7B5238A63BD7FEB0 /* ClaudeClient.swift */; };
+		83EDB60D741A88755E23F79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894E977406BE1DBFC0EB1AC8 /* Assets.xcassets */; };
+		8638D38B9DF83BE82AB0A452 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99C2CE272942515796CD7C3 /* SharedStore.swift */; };
+		9553A9557BA0996A6B4087A0 /* KeyboardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081B6F0745087DDAB8054281 /* KeyboardViews.swift */; };
+		9B6F2D9D2738B4D6133282E8 /* ScreenshotTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197D9E604BCD4DC1DB736C5 /* ScreenshotTools.swift */; };
+		A7CF0466AED945CCA76F7DE2 /* WingmanKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CF1E06EE9E6E1B05380C6BEE /* WingmanKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B655BCCC740AE79281D8ADA2 /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBD816408EC1517E93F23A /* CoachView.swift */; };
+		BB3AA3D93A1CF3EB5F0B9F3F /* WingmanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1F13E19A66ABA813A8F12 /* WingmanApp.swift */; };
+		C75FD09FC00404D6FA6421EB /* Playbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723DE11A5ED13556EE920C0 /* Playbook.swift */; };
+		CA127BA2DA2F1388D72877D8 /* LinesOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A363CC2EB0C1805ACB89C /* LinesOfTheDay.swift */; };
+		CFD5437F9B3E32B44443D9AC /* Playbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723DE11A5ED13556EE920C0 /* Playbook.swift */; };
+		EAE5D9B1EE6E66FA11B96585 /* GetRepliesIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08502537C6E40A356560AB4 /* GetRepliesIntent.swift */; };
+		EB717DDE14AA674C2449CA69 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99C2CE272942515796CD7C3 /* SharedStore.swift */; };
+		ECC16C29C83A6931DA7FADF2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEA642542E5416D164B937 /* Models.swift */; };
+		ED7CC860C4CE830565D09213 /* PlaybookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8E85B80201FADD21566A8 /* PlaybookView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DBC07899ACACB60B155C07C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D163FECBEB44A98C14004B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BBA207478A9A2809717BE63;
+			remoteInfo = WingmanKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EEFF0766CA3AEED64D7A6D0E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A7CF0466AED945CCA76F7DE2 /* WingmanKeyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		081B6F0745087DDAB8054281 /* KeyboardViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardViews.swift; sourceTree = "<group>"; };
+		1B0D805700B7ECB3E70897DE /* PLAYBOOK.md */ = {isa = PBXFileReference; includeInIndex = 1; path = PLAYBOOK.md; sourceTree = "<group>"; };
+		41AAA66FF10FC71AA55380A9 /* Base.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		41CBD816408EC1517E93F23A /* CoachView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoachView.swift; sourceTree = "<group>"; };
+		4314CA47E8D60ED2A35F588C /* KeyboardViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		476286EFB5BA413AC43B37C2 /* KeyboardState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardState.swift; sourceTree = "<group>"; };
+		4833D9ACA3B6E92B71490DE0 /* Wingman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wingman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F8D6F7DFA945089E704191 /* Wingman.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = Wingman.entitlements; sourceTree = "<group>"; };
+		58C61C1E5D4869BC086AB58A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666F98F80E40FAEB41A76D5E /* Secrets.example.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Secrets.example.xcconfig; sourceTree = "<group>"; };
+		6D3E9A1FB72539607B10A778 /* SetupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		86A8E85B80201FADD21566A8 /* PlaybookView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaybookView.swift; sourceTree = "<group>"; };
+		894E977406BE1DBFC0EB1AC8 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D973F1C7B5238A63BD7FEB0 /* ClaudeClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClaudeClient.swift; sourceTree = "<group>"; };
+		977CF88D330606B456D6022E /* TodayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		A99C2CE272942515796CD7C3 /* SharedStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
+		A9F9B8A354D3D3D5DD3F4BEB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B20A6230177CABA9C56602EC /* Keyboard.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = Keyboard.entitlements; sourceTree = "<group>"; };
+		B723DE11A5ED13556EE920C0 /* Playbook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Playbook.swift; sourceTree = "<group>"; };
+		C3EEA642542E5416D164B937 /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CF1E06EE9E6E1B05380C6BEE /* WingmanKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WingmanKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF1F13E19A66ABA813A8F12 /* WingmanApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WingmanApp.swift; sourceTree = "<group>"; };
+		D08502537C6E40A356560AB4 /* GetRepliesIntent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetRepliesIntent.swift; sourceTree = "<group>"; };
+		D197D9E604BCD4DC1DB736C5 /* ScreenshotTools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScreenshotTools.swift; sourceTree = "<group>"; };
+		DA0A363CC2EB0C1805ACB89C /* LinesOfTheDay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LinesOfTheDay.swift; sourceTree = "<group>"; };
+		DB088D03A704A6EA43C7F0BE /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		FABE7F7BA51FD53DB47C3E38 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65A75243DE2CDD8DABBBDFCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AA2A8BE176CEBBA3493106F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23C91B87B392815C9493AF16 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				41AAA66FF10FC71AA55380A9 /* Base.xcconfig */,
+				666F98F80E40FAEB41A76D5E /* Secrets.example.xcconfig */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		389D7A6D94F7C9048FF06D1C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DB088D03A704A6EA43C7F0BE /* AppModel.swift */,
+				41CBD816408EC1517E93F23A /* CoachView.swift */,
+				D08502537C6E40A356560AB4 /* GetRepliesIntent.swift */,
+				86A8E85B80201FADD21566A8 /* PlaybookView.swift */,
+				6D3E9A1FB72539607B10A778 /* SetupView.swift */,
+				977CF88D330606B456D6022E /* TodayView.swift */,
+				CFF1F13E19A66ABA813A8F12 /* WingmanApp.swift */,
+				894E977406BE1DBFC0EB1AC8 /* Assets.xcassets */,
+				FABE7F7BA51FD53DB47C3E38 /* Info.plist */,
+				48F8D6F7DFA945089E704191 /* Wingman.entitlements */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		3E86C53BB71DED8AA611D293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC6900FB76A2B4DCA8923333 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E6FF250440DE1EA8896CEAA = {
+			isa = PBXGroup;
+			children = (
+				F2D92E8583104D574B88080E /* Products */,
+				3E86C53BB71DED8AA611D293 /* Frameworks */,
+				23C91B87B392815C9493AF16 /* Config */,
+				76D30B2809051D31E1BA42EC /* Shared */,
+				389D7A6D94F7C9048FF06D1C /* App */,
+				A79305943BBA6675A314B8F3 /* Keyboard */,
+				A9F9B8A354D3D3D5DD3F4BEB /* README.md */,
+				1B0D805700B7ECB3E70897DE /* PLAYBOOK.md */,
+			);
+			sourceTree = "<group>";
+		};
+		76D30B2809051D31E1BA42EC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8D973F1C7B5238A63BD7FEB0 /* ClaudeClient.swift */,
+				DA0A363CC2EB0C1805ACB89C /* LinesOfTheDay.swift */,
+				C3EEA642542E5416D164B937 /* Models.swift */,
+				B723DE11A5ED13556EE920C0 /* Playbook.swift */,
+				D197D9E604BCD4DC1DB736C5 /* ScreenshotTools.swift */,
+				A99C2CE272942515796CD7C3 /* SharedStore.swift */,
+			);
+			name = Shared;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A79305943BBA6675A314B8F3 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				476286EFB5BA413AC43B37C2 /* KeyboardState.swift */,
+				4314CA47E8D60ED2A35F588C /* KeyboardViewController.swift */,
+				081B6F0745087DDAB8054281 /* KeyboardViews.swift */,
+				58C61C1E5D4869BC086AB58A /* Info.plist */,
+				B20A6230177CABA9C56602EC /* Keyboard.entitlements */,
+			);
+			name = Keyboard;
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		BC6900FB76A2B4DCA8923333 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F2D92E8583104D574B88080E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4833D9ACA3B6E92B71490DE0 /* Wingman.app */,
+				CF1E06EE9E6E1B05380C6BEE /* WingmanKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BBA207478A9A2809717BE63 /* WingmanKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F5576B5F2AC9D076719222B /* Build configuration list for PBXNativeTarget "WingmanKeyboard" */;
+			buildPhases = (
+				E751F2C6EF68694865AB0126 /* Sources */,
+				6AA2A8BE176CEBBA3493106F /* Frameworks */,
+				19DAEDC30ACAB2CFB0CF4A9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WingmanKeyboard;
+			productName = WingmanKeyboard;
+			productReference = CF1E06EE9E6E1B05380C6BEE /* WingmanKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E377C5338E762095AB33D225 /* Wingman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7A542F6433930FA8E8E7D9C /* Build configuration list for PBXNativeTarget "Wingman" */;
+			buildPhases = (
+				484222193923C83E78ECF758 /* Sources */,
+				65A75243DE2CDD8DABBBDFCE /* Frameworks */,
+				33442C6FDEA23E79175EC32B /* Resources */,
+				EEFF0766CA3AEED64D7A6D0E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E54FC54EFC11AF44FCBC281 /* PBXTargetDependency */,
+			);
+			name = Wingman;
+			productName = Wingman;
+			productReference = 4833D9ACA3B6E92B71490DE0 /* Wingman.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D163FECBEB44A98C14004B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 7553ABCC61D26ABD9A5B7E69 /* Build configuration list for PBXProject "Wingman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E6FF250440DE1EA8896CEAA;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 100;
+			productRefGroup = F2D92E8583104D574B88080E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E377C5338E762095AB33D225 /* Wingman */,
+				2BBA207478A9A2809717BE63 /* WingmanKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19DAEDC30ACAB2CFB0CF4A9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33442C6FDEA23E79175EC32B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83EDB60D741A88755E23F79D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		484222193923C83E78ECF758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E3A2FB6CDA9AA44EB55C73 /* AppModel.swift in Sources */,
+				B655BCCC740AE79281D8ADA2 /* CoachView.swift in Sources */,
+				EAE5D9B1EE6E66FA11B96585 /* GetRepliesIntent.swift in Sources */,
+				ED7CC860C4CE830565D09213 /* PlaybookView.swift in Sources */,
+				0F27C64181CD0205A0BB3FEE /* SetupView.swift in Sources */,
+				6A079D11EBB543751288422B /* TodayView.swift in Sources */,
+				BB3AA3D93A1CF3EB5F0B9F3F /* WingmanApp.swift in Sources */,
+				24E3271F2AD526B1E390211F /* ClaudeClient.swift in Sources */,
+				435B39569314560F9B6B90BE /* LinesOfTheDay.swift in Sources */,
+				0E780E3DA3C71EFD5D9CB9BF /* Models.swift in Sources */,
+				C75FD09FC00404D6FA6421EB /* Playbook.swift in Sources */,
+				0EAAA7D14D806003E2FA0C00 /* ScreenshotTools.swift in Sources */,
+				8638D38B9DF83BE82AB0A452 /* SharedStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E751F2C6EF68694865AB0126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F5019DF0E5E362CC420E31E /* KeyboardState.swift in Sources */,
+				0C31D86B5DD41FFFB31987FE /* KeyboardViewController.swift in Sources */,
+				9553A9557BA0996A6B4087A0 /* KeyboardViews.swift in Sources */,
+				7FDDDA62C0860A3C76D88C05 /* ClaudeClient.swift in Sources */,
+				CA127BA2DA2F1388D72877D8 /* LinesOfTheDay.swift in Sources */,
+				ECC16C29C83A6931DA7FADF2 /* Models.swift in Sources */,
+				CFD5437F9B3E32B44443D9AC /* Playbook.swift in Sources */,
+				9B6F2D9D2738B4D6133282E8 /* ScreenshotTools.swift in Sources */,
+				EB717DDE14AA674C2449CA69 /* SharedStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E54FC54EFC11AF44FCBC281 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WingmanKeyboard;
+			target = 2BBA207478A9A2809717BE63 /* WingmanKeyboard */;
+			targetProxy = 7DBC07899ACACB60B155C07C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C890B966270E0DE3D45F403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AAA66FF10FC71AA55380A9 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_LANGUAGE = en;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		40B68EE32B41C51AED4C3F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = App/Wingman.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(WINGMAN_BUNDLE_PREFIX).wingman";
+				PRODUCT_NAME = Wingman;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7CE0AE4FF8A867DBB908E6EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = App/Wingman.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(WINGMAN_BUNDLE_PREFIX).wingman";
+				PRODUCT_NAME = Wingman;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC2BB429B8FFB4C4F7C276C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = Keyboard/Keyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(WINGMAN_BUNDLE_PREFIX).wingman.keyboard";
+				PRODUCT_NAME = WingmanKeyboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF1408FEDBC8511859A52CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = Keyboard/Keyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(WINGMAN_BUNDLE_PREFIX).wingman.keyboard";
+				PRODUCT_NAME = WingmanKeyboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CF976A295630E03DFBA32475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AAA66FF10FC71AA55380A9 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_LANGUAGE = en;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7553ABCC61D26ABD9A5B7E69 /* Build configuration list for PBXProject "Wingman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF976A295630E03DFBA32475 /* Debug */,
+				3C890B966270E0DE3D45F403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F5576B5F2AC9D076719222B /* Build configuration list for PBXNativeTarget "WingmanKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC2BB429B8FFB4C4F7C276C4 /* Release */,
+				CF1408FEDBC8511859A52CCD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7A542F6433930FA8E8E7D9C /* Build configuration list for PBXNativeTarget "Wingman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CE0AE4FF8A867DBB908E6EB /* Release */,
+				40B68EE32B41C51AED4C3F6C /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D163FECBEB44A98C14004B5 /* Project object */;
+}
