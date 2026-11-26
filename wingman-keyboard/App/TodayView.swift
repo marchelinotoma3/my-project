@@ -3,6 +3,7 @@ import UIKit
 
 struct TodayView: View {
     @EnvironmentObject var model: AppModel
+    @State private var showPlaybook = false
 
     var body: some View {
         NavigationStack {
@@ -54,6 +55,16 @@ struct TodayView: View {
             }
             .navigationTitle("Lines of the Day")
             .onAppear { model.refresh() }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button { showPlaybook = true } label: {
+                        Label("Playbook", systemImage: "book.fill")
+                    }
+                }
+            }
+            .sheet(isPresented: $showPlaybook) {
+                PlaybookView()
+            }
         }
     }
 }

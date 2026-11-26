@@ -67,19 +67,10 @@ struct ClaudeClient {
         guard imageJPEG != nil || !trimmedChat.isEmpty else { throw ClientError.nothingToRead }
 
         var content: [[String: Any]] = []
-        if let imageJPEG {
-            content.append([
-                "type": "image",
-                "source": [
-                    "type": "base64",
-                    "media_type": "image/jpeg",
-                    "data": imageJPEG.base64EncodedString(),
-                ],
-            ])
-        }
+        if let imageJPEG { content.append(Self.imageBlock(imageJPEG)) }
         content.append(["type": "text", "text": Self.repliesPrompt(chatText: trimmedChat, draft: draft, vibe: vibe, spice: spice)])
 
-        let json = try await send(content: content, schema: Playbook.analysisSchema)
+        let json = try await send(messages: [Self.userMessage(content)], schema: Playbook.analysisSchema)
         do {
             var analysis = try JSONDecoder().decode(Analysis.self, from: json)
             analysis.createdAt = Date()
@@ -98,7 +89,7 @@ struct ClaudeClient {
         For each one give the setup he sends, the reply she'll most likely send back ("wym?", "how so?", or her test), and the payoff he sends next.
         Make them original. Don't reuse well-known pickup lines.
         """
-        let json = try await send(content: [["type": "text", "text": prompt]], schema: Playbook.linesSchema)
+        let json = try await send(messages: [Self.userMessage([["type": "text", "text": prompt]])], schema: Playbook.linesSchema)
 
         struct Wire: Decodable {
             struct Line: Decodable {
@@ -123,7 +114,94 @@ struct ClaudeClient {
         }
     }
 
+    // MARK: Practice
+
+    /// Her next text in a practice chat. The transcript must start with one of your messages.
+    func practiceReply(persona: PracticePersona, transcript: [PracticeMessage]) async throws -> (turn: PracticeTurn, raw: String) {
+        let messages = Self.practiceMessages(transcript)
+        let json = try await send(system: persona.systemPrompt, cacheSystem: false,
+                                  messages: messages, schema: PracticeSchemas.turn)
+        do {
+            let turn = try JSONDecoder().decode(PracticeTurn.self, from: json)
+            return (turn, String(decoding: json, as: UTF8.self))
+        } catch {
+            throw ClientError.badJSON(error.localizedDescription)
+        }
+    }
+
+    /// Grades a practice chat against the playbook.
+    func scorePractice(persona: PracticePersona, transcript: [PracticeMessage]) async throws -> PracticeScore {
+        let prompt = PracticeSchemas.scorePrompt(persona: persona, transcript: transcript)
+        let json = try await send(messages: [Self.userMessage([["type": "text", "text": prompt]])],
+                                  schema: PracticeSchemas.score)
+        do {
+            return try JSONDecoder().decode(PracticeScore.self, from: json)
+        } catch {
+            throw ClientError.badJSON(error.localizedDescription)
+        }
+    }
+
+    /// Turns the practice transcript into alternating user/assistant turns.
+    /// Her turns are replayed exactly as the model produced them (append-only history).
+    static func practiceMessages(_ transcript: [PracticeMessage]) -> [[String: Any]] {
+        var messages: [[String: Any]] = []
+        var pendingRole: String?
+        var pendingText: [String] = []
+
+        func flush() {
+            guard let role = pendingRole, !pendingText.isEmpty else { return }
+            messages.append(["role": role, "content": [["type": "text", "text": pendingText.joined(separator: "\n")]]])
+            pendingText = []
+        }
+
+        for message in transcript {
+            let role = message.fromMe ? "user" : "assistant"
+            let text = message.fromMe ? message.text : (message.rawModelOutput ?? message.text)
+            if role != pendingRole {
+                flush()
+                pendingRole = role
+            }
+            pendingText.append(text)
+        }
+        flush()
+        return messages
+    }
+
+    // MARK: Profile review
+
+    func reviewProfile(photosJPEG: [Data], bio: String) async throws -> ProfileReview {
+        guard !photosJPEG.isEmpty else { throw ClientError.nothingToRead }
+        var content: [[String: Any]] = []
+        for (index, photo) in photosJPEG.enumerated() {
+            content.append(["type": "text", "text": "Photo \(index + 1):"])
+            content.append(Self.imageBlock(photo))
+        }
+        content.append(["type": "text", "text": ProfileReview.prompt(photoCount: photosJPEG.count, bio: bio)])
+        let json = try await send(system: ProfileReview.systemPrompt, cacheSystem: false,
+                                  messages: [Self.userMessage(content)], schema: ProfileReview.schema)
+        do {
+            return try JSONDecoder().decode(ProfileReview.self, from: json)
+        } catch {
+            throw ClientError.badJSON(error.localizedDescription)
+        }
+    }
+
     // MARK: Prompt building
+
+    static func imageBlock(_ jpeg: Data) -> [String: Any] {
+        [
+            "type": "image",
+            "source": [
+                "type": "base64",
+                "media_type": "image/jpeg",
+                "data": jpeg.base64EncodedString(),
+            ],
+        ]
+    }
+
+    static func userMessage(_ content: [[String: Any]]) -> [String: Any] {
+        ["role": "user", "content": content]
+    }
 
     static func repliesPrompt(chatText: String, draft: String?, vibe: Vibe, spice: Spice) -> String {
         var parts: [String] = []
@@ -152,16 +230,18 @@ struct ClaudeClient {
         !model.contains("haiku")
     }
 
-    func requestBody(content: [[String: Any]], schema: [String: Any], includeFallbacks: Bool) -> [String: Any] {
+    func requestBody(system: String = Playbook.systemPrompt,
+                     cacheSystem: Bool = true,
+                     messages: [[String: Any]],
+                     schema: [String: Any],
+                     includeFallbacks: Bool) -> [String: Any] {
+        var systemBlock: [String: Any] = ["type": "text", "text": system]
+        if cacheSystem { systemBlock["cache_control"] = ["type": "ephemeral"] }
         var body: [String: Any] = [
             "model": model,
             "max_tokens": 16000,
-            "system": [[
-                "type": "text",
-                "text": Playbook.systemPrompt,
-                "cache_control": ["type": "ephemeral"],
-            ]],
-            "messages": [["role": "user", "content": content]],
+            "system": [systemBlock],
+            "messages": messages,
             "output_config": [
                 // Keyboard replies need to be fast; "low" keeps thinking short.
                 "effort": "low",
@@ -173,14 +253,18 @@ struct ClaudeClient {
     }
 
     /// Sends the request and returns the bytes of the JSON text block.
-    private func send(content: [[String: Any]], schema: [String: Any]) async throws -> Data {
+    private func send(system: String = Playbook.systemPrompt,
+                      cacheSystem: Bool = true,
+                      messages: [[String: Any]],
+                      schema: [String: Any]) async throws -> Data {
         guard !apiKey.isEmpty else { throw ClientError.missingAPIKey }
 
         var useFallbacks = supportsServerFallbacks
         var attempt = 0
         while true {
             attempt += 1
-            let body = requestBody(content: content, schema: schema, includeFallbacks: useFallbacks)
+            let body = requestBody(system: system, cacheSystem: cacheSystem, messages: messages,
+                                   schema: schema, includeFallbacks: useFallbacks)
             var request = URLRequest(url: Self.endpoint)
             request.httpMethod = "POST"
             request.timeoutInterval = 60

@@ -18,12 +18,12 @@ enum Playbook {
 
     The playbook, which is how he texts:
     1. Never be boring. No "hey how's your day", no interview questions, and don't answer a boring question with a boring answer. Pattern-interrupt instead.
-    2. Openers use a weird setup that makes her ask "wym?" or "how so?" ("you're like a library book"). Then the payoff lands on her follow-up, usually a pun or double meaning ("i'd check you out and keep you past the due date"). Use details from her profile when you can see them.
+    2. Openers come in two shapes. The weird setup makes her ask "wym?" or "how so?" ("you're like a library book"), and the payoff lands on her follow-up, usually a pun or double meaning ("i'd check you out and keep you past the due date"). The bait-and-switch opens with a normal-sounding saying she'll agree with ("they say history repeats itself"), then flips it into a cheeky punchline once she agrees. Use details from her profile when you can see them.
     3. Run the bit. Stay in the theme she's reacting to and build on what she adds. A callback beats a new topic.
     4. Keep it short. Most texts are under 12 words, one message, never a paragraph. Lowercase is fine. Use emoji rarely or not at all.
     5. Stay unbothered. When she tests him, teases, or acts cold, he never apologizes, explains, or over-invests. Use deadpan short answers ("yes"), dry sarcasm ("oh what a kind response to a compliment"), or flip her jab into a compliment to himself. A sincere-sounding light compliment can revive a chat she's trying to end.
     6. Match, then raise. Turn the flirting up one notch only after she matches it (laughs, plays along, says "promise?", flirts back).
-    7. Close fast. The moment she's warm, offer a close: a two-word number ask ("phone number"), or a date ask made out of the bit ("so when are we doing this in person?"). If she says "ask nicely", play along.
+    7. Close fast. The moment she's warm, offer a close: a two-word number ask ("phone number"), or a date ask made out of the bit ("so when are we doing this in person?"). If you're not sure she's in, check with a two-word "so yea?" first, and close on her yes. If she says "ask nicely", play along.
     8. Plans beat pen pals. Once he has her number, steer toward a specific plan with a day and an activity.
 
     Hard lines, which are good game and not negotiable:
@@ -106,6 +106,9 @@ enum Playbook {
         Principle(emoji: "🌀", title: "Don't be normal",
                   body: "Skip \"hey how's your day.\" Open with a weird setup that forces her to ask \"wym?\"",
                   example: "you're like a library book → how so? → i'd check you out and keep you past the due date"),
+        Principle(emoji: "🪤", title: "Or: bait and switch",
+                  body: "Open with something normal she'll agree with, then flip it into the punchline. This is the opener from his most-viewed reel (180K views).",
+                  example: "they say history repeats itself → i believe that → good, because last time it went great for me"),
         Principle(emoji: "🎭", title: "Run the bit",
                   body: "Once she's playing along, stay in the same theme. Build on whatever she adds instead of changing the subject.",
                   example: "If she jokes back about the library, you're the librarian now. Keep going."),
@@ -119,8 +122,8 @@ enum Playbook {
                   body: "Turn the flirting up one notch only after she matches you. Read her energy, don't outrun it.",
                   example: "She says \"promise?\". That's your green light for one step more."),
         Principle(emoji: "📱", title: "Close fast",
-                  body: "The moment she's laughing or flirting back, ask for the number. Two words. No \"would you maybe…\"",
-                  example: "\"phone number\""),
+                  body: "The moment she's laughing or flirting back, ask for the number. Two words. No \"would you maybe…\" Not sure she's in? Check with \"so yea?\" first.",
+                  example: "you: so yea? → her: yes → you: phone number"),
         Principle(emoji: "🗓️", title: "Plans beat pen pals",
                   body: "Once you have her number, set a real plan with a day and an activity.",
                   example: "\"you, me, tacos, thursday. i'll let you pick the place\""),

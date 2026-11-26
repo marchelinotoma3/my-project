@@ -1,14 +1,20 @@
 # The Playbook — what @stockton.mcclellan's reels actually teach
 
-Research notes from 9 of his reels (Nov 24–25, 2026, the most-viewed ones plus the
-ones demoing his REF app). Most of his content follows one format: *"Day ___ of
-reviewing my Tinder rizz"*, a screen-recording of a Tinder chat, with his voiceover.
-These notes are a summary in my own words. The rules below are what the Wingman
-keyboard's AI is told to follow.
+Research notes on his reels. These notes are a summary in my own words. The rules
+below are what the Wingman keyboard's AI is told to follow.
 
-Reels reviewed: `DgJEDdeyUXW` (54K plays), `DgJYz7Dh84Q`, `DgJMEVAPX7E`,
-`DgG8i6ShRTK`, `DgJVyyrhLjg`, `DgJSIx7htHv`, `DgJSgdZBg49`, `DgLKW4GBesn`,
-`DgLgQjPSoAD`.
+## Coverage: how much of his account this is based on
+
+- **Listed: 108 reels**, Nov 19 to Nov 25, 2026. He posts about 12 a day, and there are older ones beyond that I couldn't list.
+- **Watched in full: 10**, including his #1 most-viewed reel (`Df7yEQkxAdw`, 180K plays) and #4 (`DgJEDdeyUXW`, 54K).
+  - Also watched: `DgJYz7Dh84Q`, `DgJMEVAPX7E`, `DgG8i6ShRTK`, `DgJVyyrhLjg`, `DgJSIx7htHv`, `DgJSgdZBg49`, `DgLKW4GBesn`, `DgLgQjPSoAD`.
+- **Why not all of them:** watching costs 10 vidIQ credits per reel, and the account's 150 monthly credits ran out (they reset Dec 26).
+  Downloading them directly is blocked: Instagram requires a login after the first video.
+  The full list with titles and view counts is in [`research/reels.md`](research/reels.md), so the rest can be watched later.
+- **The format barely changes.** Nearly every reel is *"Day ___ of reviewing my Tinder rizz"*: a Tinder chat screen-recording with his voiceover. It opens with one of the same three lines, then follows the 5 steps below.
+  Every reel I watched (Day 73 through Day 124) followed this structure, so the playbook should hold for the ones I didn't see.
+  - 8 of the 108 are ads for his app ("GET REF IN MY BIO FOR THE LINE OF THE DAY").
+  - A few carry a *"this video is satire and made for jokes"* disclaimer.
 
 ---
 
@@ -25,10 +31,12 @@ unexpected, stay unbothered, and close fast.**
 | Step | What he does | Example pattern |
 |---|---|---|
 | 1. **Weird setup** | Opens with a strange statement or comparison that *forces* a "wym?" / "how so?" | "You're like [historical figure / random object]" · "I'm like a horse in tall grass" · "Do you brush your teeth?" |
+| 1b. **…or bait-and-switch** | Opens with a *normal* saying she'll agree with, then flips it once she agrees. This is the opener from his #1 reel (180K views). He ran it on two matches in the same video to prove it wasn't a fluke | "They say history repeats itself" → "I believe that" → [cheeky reason he hopes it repeats] |
 | 2. **Pun payoff** | Lands a punchline (usually a double meaning) on her follow-up question | horse → "I'm just *tickled* to be here" |
 | 3. **Run the bit** | Doesn't change topic. Stays in the same theme and builds on whatever *she* adds | Jail joke → she adds a line → he keeps the cop/criminal roleplay going for 4 more texts |
 | 4. **Match, then raise** | Turns up the flirting only after she plays along ("Promise?", "I wouldn't mind", "lol sure") | One notch at a time, never a jump |
 | 5. **Close immediately** | The moment she's warm, two words: **"Phone number"** (no "would you maybe…") | Or turns the bit into the date ask: "so when we [bit-as-a-verb]?" |
+| 5b. **"So yea?" check** | When she's flirting but hasn't clearly said yes, he sends just "so yea?". On her "yes", he sends "phone number" | Used in both chats of his #1 reel |
 
 ## Handling tests and attitude (his "toughest matchup" reel)
 
@@ -56,17 +64,19 @@ When she's cold, sarcastic, or says "lame, ciao":
 - Cut low-effort selfies: bathroom mirror, harsh light, parking garages.
 - No duplicates. Each photo should show a different setting or outfit.
 
-## What his REF app does (the thing you asked me to build)
+## What his REF app does, and Wingman's version
 
-From his demo reels, REF is:
-1. A **custom iOS keyboard** with buttons for **Coaching**, **Icebreakers**, and **Scan**.
-2. **Scan:** take a screenshot of the chat, and the keyboard pops up "Got your screenshot. Tap Scan."
-   It shows "Reading the chat… Checking the vibe…" and then gives a reply to send.
-3. **Coaching:** a breakdown card showing "What's going on" (e.g. *she's teasing you to see if you fold*)
-   and then "Send this" with a copy button.
-4. **Profile review:** keep, replace, or move down each photo.
+His site (refdating.com/start) lists "five tools, one coach in your pocket":
 
-Wingman (this project) covers 1–3 and adds **Lines of the Day**.
+| REF | What it does | Wingman |
+|---|---|---|
+| **REF Keyboard** | Screenshot the chat, tap Scan, then Insert (or Another) | ✅ Keyboard → **Scan** (also Back Tap, a copied image, or copied text) |
+| **Coaching** | Paste a message or screenshot, get a reply plus *why it works* | ✅ **Coach** tab, plus the read and move in the keyboard |
+| **Practice** | Realistic practice chats, then a score with a breakdown | ✅ **Practice** tab: 5 AI matches, a live interest meter, 💡 hints, and **Score me** (Hook / Confidence / Wit / Brevity / Close) |
+| **Profile Review** | Photo and bio feedback, "never rates looks" | ✅ **Profile** tab: lead / keep / move down / replace per photo, a bio rewrite, and next steps |
+| **Line of the Day** | A fresh opener every day, Copy or Another | ✅ **Lines** tab plus 🔥 in the keyboard: 5 a day and ✨ fresh AI lines |
+
+REF is 18+, iPhone only for now, and "free to start".
 
 ## What Wingman deliberately does differently
 

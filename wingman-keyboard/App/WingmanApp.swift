@@ -21,7 +21,7 @@ struct ContentView: View {
     @EnvironmentObject var model: AppModel
     @State private var tab: AppTab = .today
 
-    enum AppTab { case today, coach, playbook, setup }
+    enum AppTab { case today, coach, practice, profile, setup }
 
     var body: some View {
         TabView(selection: $tab) {
@@ -31,9 +31,12 @@ struct ContentView: View {
             CoachView()
                 .tabItem { Label("Coach", systemImage: "bubble.left.and.text.bubble.right.fill") }
                 .tag(AppTab.coach)
-            PlaybookView()
-                .tabItem { Label("Playbook", systemImage: "book.fill") }
-                .tag(AppTab.playbook)
+            PracticeView()
+                .tabItem { Label("Practice", systemImage: "figure.boxing") }
+                .tag(AppTab.practice)
+            ProfileReviewView()
+                .tabItem { Label("Profile", systemImage: "person.crop.rectangle.stack.fill") }
+                .tag(AppTab.profile)
             SetupView()
                 .tabItem { Label("Setup", systemImage: "gearshape.fill") }
                 .tag(AppTab.setup)

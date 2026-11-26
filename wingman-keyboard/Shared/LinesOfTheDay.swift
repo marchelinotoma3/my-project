@@ -55,7 +55,21 @@ enum LinesOfTheDay {
                   herReply: "for what lol",
                   payoff: "i stared at your profile so long my screen time doubled"),
 
+        // Bait and switch: a normal saying she'll agree with, then the flip.
+        DailyLine(kind: .opener, spice: .clean,
+                  setup: "they say the early bird gets the worm",
+                  herReply: "true",
+                  payoff: "so what time are you up saturday, because i'm taking you to breakfast"),
+        DailyLine(kind: .opener, spice: .clean,
+                  setup: "they say you should never meet your heroes",
+                  herReply: "facts",
+                  payoff: "good thing you're more of a villain. when are we meeting"),
+
         // MARK: Openers: flirty
+        DailyLine(kind: .opener, spice: .flirty,
+                  setup: "they say laughter is the best medicine",
+                  herReply: "i believe that",
+                  payoff: "so i'm basically your doctor now. i'll need you to come in for a checkup"),
         DailyLine(kind: .opener, spice: .flirty,
                   setup: "you're like a library book",
                   herReply: "how so?",
@@ -98,6 +112,10 @@ enum LinesOfTheDay {
                   setup: "you're like a sports car",
                   herReply: "how so",
                   payoff: "probably high maintenance and i'd still take you for a ride"),
+        DailyLine(kind: .opener, spice: .spicy,
+                  setup: "they say practice makes perfect",
+                  herReply: "true",
+                  payoff: "so we should probably start practicing"),
         DailyLine(kind: .opener, spice: .spicy,
                   setup: "you're like the moon",
                   herReply: "aw why",

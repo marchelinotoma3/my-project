@@ -26,6 +26,16 @@ the method from @stockton.mcclellan's reels (see [PLAYBOOK.md](PLAYBOOK.md)).
 4. **🔥 Lines** has today's 5 lines (opener → what she'll say → your payoff). New ones every day, plus a ✨ button for AI-written fresh ones.
 5. **Vibe button** (😏 Flirty) picks what you want: Auto · Funny · Flirty · Smooth · Get the # · Revive. **Spice** sets how far it goes: Clean · Flirty · Spicy.
 
+**In the Wingman app** (the same five tools his REF app has):
+
+| Tab | What it does |
+|---|---|
+| 🔥 **Lines** | Today's 5 lines, plus ✨ fresh AI ones. The 📖 button opens the Playbook. |
+| 💬 **Coach** | Pick a screenshot or paste a chat, and get the read, the move, and replies to copy. |
+| 🥊 **Practice** | Text an AI match (5 personalities, from a dry texter to Hard mode) with a live interest meter. 💡 gives hints. **Score me** grades you /100 on Hook, Confidence, Wit, Brevity, and Close, and shows what to send instead. |
+| 🪪 **Profile** | Add your profile photos and bio. It picks your best lead photo, marks each photo keep / move down / replace, rewrites your bio, and gives 3 next steps. It never rates looks. |
+| ⚙️ **Setup** | API key, model, keyboard, Photos, and Back Tap. |
+
 **Even faster, with Back Tap:** double-tap the back of your phone while you're in the chat.
 It screenshots and analyzes in the background, and the replies are waiting the next
 time you open the keyboard. See setup step 6.
@@ -102,8 +112,11 @@ something, then tap Scan, and the reply you pick replaces your draft.
 | Path | What it is |
 |---|---|
 | `Keyboard/` | The keyboard extension: QWERTY keys, toolbar, reply strip, Lines and Vibe panels |
-| `App/` | Companion app: Lines of the Day, Coach (pick a screenshot or paste a chat), Playbook, Setup, and the **Get Wingman Replies** Shortcuts action |
+| `App/` | Companion app: Lines, Coach, Practice, Profile Review, Setup, and the **Get Wingman Replies** Shortcuts action |
 | `Shared/Playbook.swift` | The AI's instructions: his method, turned into rules |
-| `Shared/LinesOfTheDay.swift` | 35 original lines in his setup → payoff format, rotated daily by spice level |
+| `Shared/Practice.swift` | Practice personas, her role-play instructions, and scoring |
+| `Shared/ProfileReview.swift` | Profile reviewer instructions and output format |
+| `Shared/LinesOfTheDay.swift` | 39 original lines in his formats (weird setup and bait-and-switch), rotated daily by spice level |
+| `research/reels.md` | All 108 of his reels I could list, sorted by views, with the 10 I watched marked |
 | `Shared/ClaudeClient.swift` | Calls the Claude API (structured JSON output, effort `low` for speed, server-side fallback if a request is declined) |
 | `tools/generate_xcodeproj.rb` | Rebuilds `Wingman.xcodeproj` if you add or remove files (`gem install xcodeproj`) |
